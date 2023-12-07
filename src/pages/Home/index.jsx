@@ -10,7 +10,7 @@ const Home = () => {
                 <div className="logo">
                     <Logo/>
                     <h1>Robert Duck Search</h1>
-                    <p>Google and DuckDuckGo ish search engine</p>
+                    <p>The most hilarious and useless Google and DuckDuckGo ish search engine</p>
                 </div>
                 <Search/>
                 <Link to="/search-console" className="console-link">Pond console</Link>
