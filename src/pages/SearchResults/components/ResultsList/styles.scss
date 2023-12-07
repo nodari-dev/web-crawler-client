@@ -1,0 +1,29 @@
+.results-list{
+  width: 700px;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-item{
+  width: 100%;
+
+  &:hover{
+    & .title{
+      text-decoration: underline;
+    }
+  }
+
+  & .link{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  & .description{
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+  }
+}

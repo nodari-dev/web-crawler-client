@@ -1,0 +1,25 @@
+.button{
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  background-color: #E3651D;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  & svg{
+    color: #191919;
+    font-size: 18px;
+  }
+
+  &:disabled{
+    opacity: .7;
+    background-color: white;
+    cursor: none;
+    pointer-events: none;
+  }
+}

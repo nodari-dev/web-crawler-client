@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Inter:wght@400;500&display=swap');
+
+body{
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+p{
+  line-height: 20px;
+  opacity: .8;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+  color: white;
+  font-weight: 500;
+}
+
+h1{
+  font-size: 50px;
+  font-family: 'Ephesis', cursive;
+}
+
+h3{
+  font-size: 40px;
+  font-family: 'Ephesis', cursive;
+}
+
+h5{
+  font-size: 20px;
+}

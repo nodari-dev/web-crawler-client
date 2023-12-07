@@ -1,0 +1,35 @@
+.pagination{
+  width: 100%;
+  height: 60px;
+  margin-top: 35px;
+}
+
+.pagination-container{
+  width: 700px;
+  height: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-button{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &:disabled{
+    pointer-events: none;
+    cursor: none;
+  }
+}
+
+.pagination-button-active{
+  pointer-events: none;
+  cursor: none;
+  opacity: .8;
+  @extend .pagination-button;
+}
