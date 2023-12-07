@@ -1,23 +1,13 @@
 import {useState} from "react";
-import {CgPacman} from "react-icons/cg";
 import BasicLayout from "../../components/BasicLayout";
 import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import "./styles.scss"
-
-const submit = async (text) => {
-    const response = await fetch(`http://localhost:8080/crawling/request`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "text/plain",
-        },
-        body: text,
-    });
-    return await response.json()
-}
+import useAPI from "../../hooks/useAPI.js";
 
 const SearchConsole = () => {
+    const {submit} = useAPI()
     const [text, setText] = useState("")
     const [hasSuccess, showSuccess] = useState(false)
     const [hasError, showError] = useState(false)

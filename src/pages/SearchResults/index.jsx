@@ -6,15 +6,12 @@ import Pagination from "./components/Pagination";
 import "./styles.scss";
 import Search from "../../components/Search/index.jsx";
 import BasicLayout from "../../components/BasicLayout/index.jsx";
-
-async function search(q, page, size) {
-    const response = await fetch(`http://localhost:8080/search/request?q=${q}&page=${page}&size=${size}`);
-    return await response.json()
-}
+import useAPI from "../../hooks/useAPI.js";
 
 const SearchResults = () => {
     const [seoData, setSeoData] = useState()
     const location = useLocation();
+    const {search} = useAPI()
 
     useEffect(() => {
         const params = new URLSearchParams(location.search);

@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {CgArrowRight, CgArrowLeft, CgPushLeft} from "react-icons/cg";
-import useSearch from "../../../../hooks/useSearch.js";
+import useSearchParams from "../../../../hooks/useSearchParams.js";
 import "./styles.scss"
 
 const maxToShow = 5
 const Pagination = ({max}) => {
-    const {changePage} = useSearch()
+    const {changePage} = useSearchParams()
     const location = useLocation();
     const [currentPage, setCurrentPage] = useState(1)
 

@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom";
 
-const useSearch = () => {
+const useSearchParams = () => {
     const navigate = useNavigate()
 
-    const search = (text) => {
+    const searchByQuery = (text) => {
         const params = new URLSearchParams({
             q: text,
             page: '1',
@@ -26,7 +26,7 @@ const useSearch = () => {
         navigate(`/search?${params.toString()}`);
     }
 
-    return {search, changePage}
+    return {searchByQuery, changePage}
 }
 
-export default useSearch
+export default useSearchParams

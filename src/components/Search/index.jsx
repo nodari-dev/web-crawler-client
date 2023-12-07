@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { CgSearch } from "react-icons/cg";
-import useSearch from "../../hooks/useSearch.js";
+import useSearchParams from "../../hooks/useSearchParams.js";
 import Button from "../Button";
 import Input from "../Input";
 import "./styles.scss"
 
 const Search = () => {
-    const {search} = useSearch()
+    const {searchByQuery} = useSearchParams()
     const params = new URLSearchParams(location.search);
     const searchText = params.get('q');
     const [text, setText] = useState(searchText || "");
@@ -19,7 +19,7 @@ const Search = () => {
 
     const handleKeyPress = (key) => {
         if(!isSearchDisabled && key === "Enter"){
-            search(removeEmptySpace(text))
+            searchByQuery(removeEmptySpace(text))
         }
     }
 
@@ -31,7 +31,7 @@ const Search = () => {
                    placeholder="Search through the internet"/>
             <Button
                 disabled={isSearchDisabled}
-                onClick={() => search(removeEmptySpace(text))}>
+                onClick={() => searchByQuery(removeEmptySpace(text))}>
                 <CgSearch/>
             </Button>
         </div>
